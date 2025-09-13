@@ -1,13 +1,15 @@
-import React from 'react'
+
 import Main from './components/Main'
+import Sidebar from './components/Sidebar'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div>
-        <Sidebar/>
+    <>
         <Main/>
+        <Sidebar/>
         <Footer/>
-    </div>
+    </>
   )
 }
 
