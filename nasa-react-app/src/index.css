@@ -48,12 +48,25 @@ footer{
   gap:1rem;
 }
 
+footer div{
+  display: flex;
+  flex-direction: column;
+  
+}
+
 footer h2{
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 footer h1{
-  font-size:0.9rem;
+  font-size:1.2rem;
   font-weight: 200; 
+}
+footer button {
+  background: transparent ;
+  color: white;
+  border:none;
+  outline: none;
+  margin-left:auto  ;
 }
 
 .bg-gradient{
