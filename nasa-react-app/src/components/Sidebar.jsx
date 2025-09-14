@@ -1,17 +1,17 @@
 import React from 'react'
 
 const Sidebar = (props) => {
-    const {handleToggleModal} = props;
+    const {handleToggleModal,data} = props;
     return (
         <aside className='sidebar'>
-            <div className='bg-overlay'> </div>
+            <div onClick={handleToggleModal} className='bg-overlay'> </div>
             <div className='sidebar-contents'>
 
-                <h2>The Brutal Martian Landscape</h2>
-                <div>
+                <h2>{data?.title}</h2>
+                <div className='explanation'>
 
-                    <p>Description</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, enim laborum eius pariatur quaerat temporibus itaque aperiam expedita, ipsa repellat quas alias illum quisquam rerum nesciunt praesentium perspiciatis numquam! Dolorem!</p>
+                    <p className='description'>{data?.date}</p>
+                    <p>{data?.explanation}</p>
                 </div>
                 <button onClick={handleToggleModal}><i className="fa-solid fa-arrow-right"></i></button>
             </div>

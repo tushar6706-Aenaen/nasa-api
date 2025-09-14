@@ -1,9 +1,20 @@
 import React from 'react'
 
-const Main = () => {
+const Main = (props) => {
+    const { data } = props;
   return (
     <main className='image-container'>
-        <img src="mars.png"  alt="Mars"   className='bgImage'/> 
+        {data?.media_type === 'video' ? (
+            <iframe 
+                src={data.url} 
+                title={data?.title}
+                className='bgImage'
+                frameBorder="0"
+                allowFullScreen
+            />
+        ) : (
+            <img src={data.url} alt={data?.title} className='bgImage'/> 
+        )}
     </main>
   )
 }
